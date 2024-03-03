@@ -50,6 +50,3 @@ details summary::-webkit-details-marker {
   transition: max-height 0.3s ease;
 }
 
-details[open] .details-content {
-  max-height: 1000px;
-}
