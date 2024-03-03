@@ -1,0 +1,55 @@
+details {
+  width: 60vh;
+  padding: 1%;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+details summary {
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+}
+
+.arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+details:not([open]) .arrow {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+details:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+details[open] .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+details[open]:last-child {
+  margin-top: 2%
+}
+
+details[open] {
+  margin-bottom: 2%
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+.details-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+details[open] .details-content {
+  max-height: 1000px;
+}
